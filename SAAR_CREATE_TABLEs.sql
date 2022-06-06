@@ -110,7 +110,6 @@ CREATE TABLE Pedido (
     emissao DATETIME,
     observacoes VARCHAR(300),
     num_comanda INTEGER,
-    valor DECIMAL(15 , 2 ),
     PRIMARY KEY (numero),
     FOREIGN KEY (num_comanda)
         REFERENCES Comanda (numero)
