@@ -110,6 +110,7 @@ CREATE TABLE Pedido (
     emissao DATETIME,
     observacoes VARCHAR(300),
     num_comanda INTEGER,
+    valor DECIMAL(15 , 2 ),
     PRIMARY KEY (numero),
     FOREIGN KEY (num_comanda)
         REFERENCES Comanda (numero)
@@ -156,7 +157,7 @@ CREATE TABLE Item_Adicional (
 );
 
 CREATE TABLE Item_com_Tamanho (
-    preco DECIMAL(15 , 2),
+    preco DECIMAL(15 , 2 ),
     id_item INTEGER,
     sigla_tam ENUM('U', 'P', 'M', 'G'),
     PRIMARY KEY (id_item , sigla_tam),
@@ -178,7 +179,7 @@ CREATE TABLE Pedido_tem_Item_com_Tamanho (
 );
 
 CREATE TABLE Garcom_atende_Mesa (
-    gorjeta DECIMAL(5 , 2 ),
+    gorjeta DECIMAL(15 , 2 ),
     hora_atend DATETIME,
     id_garcom INTEGER,
     num_mesa INTEGER,
