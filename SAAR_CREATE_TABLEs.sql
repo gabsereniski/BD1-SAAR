@@ -95,7 +95,7 @@ CREATE TABLE Atendimento (
 CREATE TABLE Comanda (
     numero INTEGER AUTO_INCREMENT,
     tipo_pagmnt ENUM(
-		'Dinheio', 
+		'Dinheiro', 
         'Cartão de débito', 
         'Cartão de crédito', 
         'PIX', 
@@ -129,7 +129,7 @@ CREATE TABLE Item_do_menu (
 
 CREATE TABLE Tamanho (
     sigla ENUM('U', 'P', 'M', 'G'),
-    peso REAL,
+    peso VARCHAR(15),
     num_porcoes INTEGER,
     PRIMARY KEY (sigla)
 );
@@ -182,7 +182,7 @@ CREATE TABLE Garcom_atende_Mesa (
     hora_atend DATETIME,
     id_garcom INTEGER,
     num_mesa INTEGER,
-    PRIMARY KEY (id_garcom , num_mesa),
+    PRIMARY KEY (id_garcom , num_mesa), gmot1602s
     FOREIGN KEY (id_garcom)
         REFERENCES Funcion_garcom (id),
     FOREIGN KEY (num_mesa)
