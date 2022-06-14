@@ -182,8 +182,7 @@ CREATE TABLE Garcom_atende_Mesa (
     hora_atend DATETIME,
     id_garcom INTEGER,
     num_mesa INTEGER,
-    PRIMARY KEY (id_garcom , num_mesa), gmot1602s
-    FOREIGN KEY (id_garcom)
+    PRIMARY KEY (id_garcom , num_mesa),
         REFERENCES Funcion_garcom (id),
     FOREIGN KEY (num_mesa)
         REFERENCES Mesa (numero)
