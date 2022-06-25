@@ -159,22 +159,22 @@ CREATE TABLE Item_com_Tamanho (
     preco DECIMAL(15 , 2 ),
     id_item INTEGER,
     qtde_tam VARCHAR(15),
-    PRIMARY KEY (id_item , sigla_tam),
+    PRIMARY KEY (id_item , qtde_tam),
     FOREIGN KEY (id_item)
         REFERENCES Item_do_menu (id),
-    FOREIGN KEY (sigla_tam)
-        REFERENCES Tamanho (sigla)
+    FOREIGN KEY (qtde_tam)
+        REFERENCES Tamanho (qtde)
 );
 
 CREATE TABLE Pedido_tem_Item_com_Tamanho (
     num_pedido INTEGER,
     id_item INTEGER,
-    sigla_tam ENUM('U', 'P', 'M', 'G'),
-    PRIMARY KEY (num_pedido , id_item , sigla_tam),
+    qtde_tam VARCHAR(15),
+    PRIMARY KEY (num_pedido , id_item , qtde_tam),
     FOREIGN KEY (num_pedido)
         REFERENCES Pedido (numero),
-    FOREIGN KEY (id_item , sigla_tam)
-        REFERENCES Item_com_Tamanho (id_item , sigla_tam)
+    FOREIGN KEY (id_item , qtde_tam)
+        REFERENCES Item_com_Tamanho (id_item , qtde_tam)
 );
 
 CREATE TABLE Garcom_atende_Mesa (
