@@ -128,10 +128,10 @@ CREATE TABLE Item_do_menu (
 );
 
 CREATE TABLE Tamanho (
+    qtde VARCHAR(15),
     sigla ENUM('U', 'P', 'M', 'G'),
-    peso VARCHAR(15),
     num_porcoes INTEGER,
-    PRIMARY KEY (sigla)
+    PRIMARY KEY (qtde)
 );
 
 CREATE TABLE Ingrediente (
@@ -158,7 +158,7 @@ CREATE TABLE Item_Adicional (
 CREATE TABLE Item_com_Tamanho (
     preco DECIMAL(15 , 2 ),
     id_item INTEGER,
-    sigla_tam ENUM('U', 'P', 'M', 'G'),
+    qtde_tam VARCHAR(15),
     PRIMARY KEY (id_item , sigla_tam),
     FOREIGN KEY (id_item)
         REFERENCES Item_do_menu (id),
