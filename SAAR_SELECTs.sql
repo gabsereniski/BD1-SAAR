@@ -42,7 +42,7 @@ where C.numero not in (
     and PIT.id_item = I.id
     and I.categoria = C.nome
     and C.nome != 'Cervejas Artesanais'
-)
+);
 
 -- 4. Selecione as comandas que pediram porções mas não pediram adicionais
 select C.numero
