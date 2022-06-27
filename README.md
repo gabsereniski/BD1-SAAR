@@ -14,3 +14,5 @@ O SAAR tem como base o modelo de negócio do bar e restaurante [Entorna Madalena
 * [1. Modelo Entidade-Relacionamento](https://github.com/gabsereniski/BD1-SAAR/blob/main/Modelo%20Entidade-Relacionamento.pdf)<br />
 [1.1.  Modelo Entidade-Relacionamento - CORRIGIDO](https://github.com/gabsereniski/BD1-SAAR/blob/main/Modelo%20Entidade-Relacionamento%20(corrigido).pdf)
 * [2. Modelo Relacional](https://github.com/gabsereniski/BD1-SAAR/blob/main/SAAR_CREATE_TABLEs.sql)
+* [3. Inserção de dados](https://github.com/gabsereniski/BD1-SAAR/blob/main/SAAR_INSERT_INTOs.sql)
+* [4. Consultas](https://github.com/gabsereniski/BD1-SAAR/blob/main/SAAR_SELECTs.sql)
