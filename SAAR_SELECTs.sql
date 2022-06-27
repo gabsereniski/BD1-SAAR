@@ -29,7 +29,7 @@ where C.numero not in (
     from Pedido P, Pedido_tem_Item_com_Tamanho PIT, Item_do_menu I, Categoria C 
     where P.numero = PIT.num_pedido
     and PIT.id_item = I.id
-    and I.categoria = C.nome
+	and I.categoria = C.nome
     and C.nome != 'Porções'
 )
 union
@@ -91,10 +91,7 @@ where I.nome_depto = D.nome
 and D.responsavel_por = C.nome
 and C.nome in (
 	select C2.nome
-    from Categoria C2,
-		 Item_do_menu I, 
-         Item_com_Tamanho IT, 
-         Pedido_tem_Item_com_Tamanho PIT
+    from Categoria C2, Item_do_menu I, Item_com_Tamanho IT, Pedido_tem_Item_com_Tamanho PIT
     where C2.nome = I.categoria
     and IT.id_item = I.id
     and PIT.id_item = IT.id_item
